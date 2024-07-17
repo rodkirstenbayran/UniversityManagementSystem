@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UniversityBusinessService">
+      <HintPath>..\Client\bin\Debug\net8.0\UniversityBusinessService.dll</HintPath>
+    </Reference>
+    <Reference Include="UniversityDataService">
+      <HintPath>..\Client\bin\Debug\net8.0\UniversityDataService.dll</HintPath>
+    </Reference>
+    <Reference Include="UniversityModel">
+      <HintPath>..\Client\bin\Debug\net8.0\UniversityModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -7,7 +7,8 @@ namespace UniversityDataService
     {
 
         string connectionString
-        = "Data Source = DESKTOP-EO8PNHF\\SQLEXPRESS; Initial Catalog = UniversityManagement; Integrated Security = True;";
+       // = "Data Source = DESKTOP-EO8PNHF\\SQLEXPRESS; Initial Catalog = UniversityManagement; Integrated Security = True;";
+        = "Server=tcp:20.212.248.41,1433;Database=UniversityManagement;User Id=sa;Password=rkb1104!";
 
         SqlConnection sqlConnection;
 
@@ -151,7 +152,7 @@ namespace UniversityDataService
             return success;
         }
 
-        public int DeleteUser(string name)
+        public int DeleteUniversity(string name)
         {
             int success;
 
@@ -159,7 +160,7 @@ namespace UniversityDataService
             SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
             sqlConnection.Open();
 
-            deleteCommand.Parameters.AddWithValue("@username", name);
+            deleteCommand.Parameters.AddWithValue("@name", name);
 
             success = deleteCommand.ExecuteNonQuery();
 

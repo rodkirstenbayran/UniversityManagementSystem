@@ -20,9 +20,9 @@ namespace UniversityBusinessService
             return result;
         }
 
-        public bool CreateUniversity(string name, string type)
+        public bool CreateUniversity(string name, string type, string location, string courses)
         {
-            University university = new University { name = name, type = type };
+            University university = new University { name = name, type = type, location = location, courses = courses };
 
             return CreateUniversity(university);
         }
@@ -46,13 +46,13 @@ namespace UniversityBusinessService
             return UpdateUniversity(university);
         }
 
-        public bool DeleteUser(University university)
+        public bool DeleteUniversity(University university)
         {
             bool result = false;
 
             if (validationServices.CheckIfUniversityNameExists(university.name))
             {
-                result = universityData.DeleteUser(university) > 0;
+                result = universityData.DeleteUniversity(university) > 0;
             }
 
             return result;

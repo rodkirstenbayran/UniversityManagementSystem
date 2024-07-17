@@ -39,9 +39,9 @@ namespace UniversityDataService
             return sqlData.UpdateUniversity(university.name, university.type);
         }
 
-        public int DeleteUser(University university)
+        public int DeleteUniversity(University university)
         {
-            return sqlData.DeleteUser(university.name);
+            return sqlData.DeleteUniversity(university.name);
         }
 
 
